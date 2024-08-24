@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "../style/MainPage.css";
 import { Plus } from "../components/Plus";
@@ -9,47 +9,53 @@ import { CallbackCard } from "../components/CallbackCard";
 import { ArticleCard } from "../components/ArticleCard";
 
 import { getArticles, getOtzivi, urlFor } from "../sanityclient";
-
-const articles = await getArticles();
-const otzivi = await getOtzivi();
-
-let articleElements = [];
-
-if (Object.keys(articles).length > 0) {
-  for (let i = 0; i < Object.keys(articles).length; i++) {
-    const article = articles[i];
-    articleElements.push({
-      body: `${article.pharagraph1.substr(0, 200)}...`, // Corrected 'pharagraph1' to 'paragraph1'
-      title: article.title1,
-      href: `/article/${article._id}`, // Added backticks for template literal
-      image_src: urlFor(article.image).url(),
-    });
-  }
-} else {
-  articleElements.push("<p>Нет доступных товаров.</p>");
-}
-// console.log(articleElements)
-let otziviElements = [];
-
-if (Object.keys(otzivi).length > 0) {
-  for (let i = 0; i < Object.keys(otzivi).length; i++) {
-    const otziv = otzivi[i];
-    otziviElements.push({
-      title: otziv.name, // Added backticks for template literal
-      image_src: urlFor(otziv.otziv).url(),
-    });
-  }
-} else {
-  otziviElements.push("<p>Нет доступных товаров.</p>");
-}
+import { Article } from "./Article";
 
 export const MainPage = () => {
-  const { anchor } = useParams(); // Getting 'anchor' from the URL params
-
+  const { anchor } = useParams();
+  const [articleElements, setArticleElements] = useState([]);
+  const [otziviElements, setOtziviElements] = useState([]);
   const blocks = {
     articles: useRef(null),
-    // Add more blocks if necessary
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const articles = await getArticles();
+      const otzivi = await getOtzivi();
+
+      if (Object.keys(articles).length > 0) {
+        const articleEls = Object.keys(articles).map((i) => {
+          const article = articles[i];
+          console.log(article);
+          return {
+            body: `${article.pharagraph1.substr(0, 200)}...`,
+            title: article.title1,
+            href: `/article/${article._id}`,
+            image_src: urlFor(article.image).url(),
+          };
+        });
+        setArticleElements(articleEls);
+      } else {
+        setArticleElements(["<p>Нет доступных товаров.</p>"]);
+      }
+
+      if (Object.keys(otzivi).length > 0) {
+        const otziviEls = Object.keys(otzivi).map((i) => {
+          const otziv = otzivi[i];
+          return {
+            title: otziv.name,
+            image_src: urlFor(otziv.otziv).url(),
+          };
+        });
+        setOtziviElements(otziviEls);
+      } else {
+        setOtziviElements(["<p>Нет доступных товаров.</p>"]);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const scrollToBlock = (anchor_ = "") => {
     if (anchor_ && blocks[anchor_]) {
@@ -60,7 +66,7 @@ export const MainPage = () => {
   };
 
   useEffect(() => {
-    scrollToBlock(anchor); // Pass 'anchor' directly
+    scrollToBlock(anchor);
   }, [anchor]);
 
   return (
