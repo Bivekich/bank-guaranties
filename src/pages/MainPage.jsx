@@ -83,27 +83,27 @@ export const MainPage = () => {
               <span>Получить гарантию</span>
             </a>
           </div>
-          <img src="/src/assets/mainImage.png" alt="" />
+          <img src="/public/mainImage.png" alt="" />
         </div>
       </div>
       <section className="pluses">
         <Plus
-          image="/src/assets/plus1.png"
+          image="/public/plus1.png"
           title="До 300 млн Р"
           body="Лимит гарантий"
         />
         <Plus
-          image="/src/assets/plus2.png"
+          image="/public/plus2.png"
           title="До 150 млн Р"
           body="Сумма гарантии"
         />
         <Plus
-          image="/src/assets/plus3.png"
+          image="/public/plus3.png"
           title="До 120 месяцев"
           body="Срок гарантии"
         />
         <Plus
-          image="/src/assets/plus4.png"
+          image="/public/plus4.png"
           title="До 1000 Р"
           body="Комиссия за выдачу"
         />
@@ -112,22 +112,22 @@ export const MainPage = () => {
         <h3>Виды гарантий</h3>
         <div className="type-card">
           <Type
-            image="/src/assets/type1.png"
+            image="/public/type1.png"
             title="Тендерная гарантия"
             body="необходима в госзакупках по 44-ФЗ., 223-ФЗ., 615-ПП.РФ."
           />
           <Type
-            image="/src/assets/type2.png"
+            image="/public/type2.png"
             title="Коммерческая гарантия"
             body="применяется в основном в коммерческих контрактах, которые заключаются вне закупок"
           />
           <Type
-            image="/src/assets/type3.png"
+            image="/public/type3.png"
             title="Таможенная гарантия"
             body="необходима тем кто занимается перевозкой товаров через границу"
           />
           <Type
-            image="/src/assets/type4.png"
+            image="/public/type4.png"
             title="Налоговая гарантия"
             body="применяется при отсрочке от уплаты налогов"
           />
@@ -201,15 +201,15 @@ export const MainPage = () => {
         <h3>Наши преимущества</h3>
         <div className="adv">
           <Advant
-            image="/src/assets/advant1.png"
+            image="/public/advant1.png"
             body="Только белые банковские гарантии. В числе наших партнеров только банки, входящие в официальный перечень МинФина РФ Гарантия подлинная - проходит любые проверки"
           />
           <Advant
-            image="/src/assets/advant2.png"
+            image="/public/advant2.png"
             body="Работаем с любыми формами организаций: ИП, ООО, АО, ЗАО"
           />
           <Advant
-            image="/src/assets/advant3.png"
+            image="/public/advant3.png"
             body="Поможем получить гарантию без залога и поручительства"
           />
         </div>

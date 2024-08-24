@@ -95,10 +95,10 @@ export const Footer = () => {
       </div>
       <div className="links">
         <a href="">
-          <img src="/src/assets/tg.svg" alt="Telegram" />
+          <img src="/public/tg.svg" alt="Telegram" />
         </a>
         <a href="">
-          <img src="/src/assets/tg.svg" alt="Telegram" />
+          <img src="/public/tg.svg" alt="Telegram" />
         </a>
       </div>
       <div className="links">

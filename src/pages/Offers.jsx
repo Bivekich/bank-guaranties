@@ -24,7 +24,7 @@ export const Offers = () => (
           </a>
         </div>
 
-        <img src="/src/assets/bank.png" alt="" />
+        <img src="/public/bank.png" alt="" />
       </div>
       <div className="banks">
         <h3>
@@ -32,10 +32,10 @@ export const Offers = () => (
           из реестра Министерства финансов
         </h3>
         <div className="bank">
-          <Bank image="/src/assets/sber.png" body="СБЕРБАНК" />
-          <Bank image="/src/assets/vtb.png" body="ВТБ" />
-          <Bank image="/src/assets/tinkoff.png" body="Т-Банк" />
-          <Bank image="/src/assets/alfabank.png" body="АЛЬФА-БАНК" />
+          <Bank image="/public/sber.png" body="СБЕРБАНК" />
+          <Bank image="/public/vtb.png" body="ВТБ" />
+          <Bank image="/public/tinkoff.png" body="Т-Банк" />
+          <Bank image="/public/alfabank.png" body="АЛЬФА-БАНК" />
         </div>
       </div>
       <div className="steps">
