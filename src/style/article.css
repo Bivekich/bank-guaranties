@@ -1,0 +1,61 @@
+article .quest {
+  max-width: 1760px;
+  margin: auto;
+  margin-bottom: 40px;
+  margin-left: 20px;
+}
+article .quest h3 {
+  font-weight: 600;
+  font-size: 38px;
+  color: #000;
+}
+article .text-block {
+  display: flex;
+  width: 100%;
+  min-height: 403px;
+  height: fit-content;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #ccd7e3;
+  padding: 20px;
+}
+article .text {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1760px;
+  width: 100%;
+  margin: auto;
+  font-weight: 400;
+  font-size: 22px;
+  color: #000;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+article .text p {
+  max-width: 1000px;
+  width: 100%;
+}
+article .maintext {
+  max-width: 1060px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+article .maintext h3 {
+  font-weight: 600;
+  font-size: 38px;
+  color: #000;
+}
+article .maintext p {
+  font-weight: 400;
+  font-size: 22px;
+  color: #000;
+}
+article .txt {
+  gap: 60px;
+  display: flex;
+  flex-direction: column;
+}

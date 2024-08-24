@@ -1,0 +1,26 @@
+.type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 360px;
+  height: fit-content;
+  min-height: 210px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+  padding: 20px;
+}
+
+.type h2 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #000;
+}
+.type p {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #5a6e85;
+}

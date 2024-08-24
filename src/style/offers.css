@@ -1,0 +1,142 @@
+.offers .steps h3 {
+  font-weight: 600;
+  font-size: 38px;
+  text-align: center;
+  color: #2c3a59;
+}
+
+.offers .step-2 {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 234px;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+.offers .text {
+  display: flex;
+  flex-direction: column;
+  max-width: 774px;
+}
+.offers .text p {
+  font-weight: 600;
+  font-size: 26px;
+  color: #000;
+}
+.offers .text h3 {
+  font-weight: 600;
+  font-size: 38px;
+  color: #000;
+}
+.offers .elipse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  stroke: 1px solid #b7aeae;
+  font-weight: 600;
+  font-size: 256px;
+  color: #000;
+}
+.offers .button-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  font-weight: 400;
+  font-size: 22px;
+  color: #fff;
+  border-radius: 10px;
+  width: 281px;
+  height: 70px;
+  background: #ff4b5f;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.offers .step {
+  display: flex;
+  flex-direction: column;
+}
+
+.offers .top-t-2 {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1760px;
+  margin: auto;
+}
+.offers .top-t-2 img {
+  max-width: 100%;
+}
+.offers .top-t {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.offers .top-t h2 {
+  font-weight: 500;
+  font-size: 45px;
+  color: #2c3a59;
+}
+.offers .top-t p {
+  font-weight: 500;
+  font-size: 32px;
+  color: #2c3a59;
+}
+.offers .button-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  font-weight: 400;
+  font-size: 22px;
+  color: #fff;
+  border-radius: 10px;
+  width: 281px;
+  height: 70px;
+  background: #ff4b5f;
+  color: #ffffff;
+  text-decoration: none;
+}
+.offers .banks {
+  margin-top: 100px;
+  width: 100%;
+  height: fit-content;
+  min-height: 786px;
+  background: #1f375a;
+  padding: 0 20px;
+}
+.offers .banks h3 {
+  padding-top: 70px;
+  font-weight: 500;
+  font-size: 38px;
+  text-align: center;
+  color: #fff;
+}
+.offers .bank {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  padding: 100px 20px;
+  gap: 90px;
+}
+.offers .steps {
+  background-color: white;
+}
+
+@media (max-width: 1100px) {
+  .offers .top-t-2 {
+    flex-direction: column;
+  }
+  .offers .top-t {
+    order: 2;
+  }
+}

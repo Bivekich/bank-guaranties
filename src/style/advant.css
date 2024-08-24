@@ -1,0 +1,23 @@
+.advant {
+  display: flex;
+  height: fit-content;
+  min-height: 280px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+  padding: 20px;
+}
+.advant .advant-type {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.advant p {
+  font-weight: 600;
+  font-size: 22px;
+  color: #000;
+}

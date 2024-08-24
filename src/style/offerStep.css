@@ -1,0 +1,73 @@
+.OfferStep {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  padding: 50px;
+  /* background: #fff; */
+}
+
+.OfferStep .text {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 700px;
+  gap: 50px;
+}
+.OfferStep .text p {
+  font-weight: 600;
+  font-size: 26px;
+  color: #000;
+  text-align: start;
+}
+.OfferStep .text h3 {
+  font-weight: 600;
+  font-size: 38px;
+  color: #000;
+  text-align: start;
+}
+.OfferStep .elipse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  border: 1px solid #b7aeae;
+}
+.OfferStep .elipse span {
+  font-weight: 600;
+  font-size: 256px;
+  color: #000;
+}
+@media (max-width: 1350px) {
+  .OfferStep .text {
+    max-width: 500px;
+  }
+  .OfferStep .elipse {
+    /* transform: scale(0.7); */
+    width: 308px;
+    height: 308px;
+  }
+  .OfferStep .elipse span {
+    font-size: 170px;
+  }
+}
+@media (max-width: 1150px) {
+  .OfferStep {
+    flex-direction: column;
+  }
+  .OfferStep .elipse {
+    order: 1 !important;
+    width: 82px;
+    height: 82px;
+  }
+  .OfferStep .elipse span {
+    font-size: 50px;
+  }
+}

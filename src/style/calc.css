@@ -1,0 +1,103 @@
+.calculator {
+  margin-left: 60px;
+}
+.calculator .forms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+.calculator #result {
+  width: fit-content;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 30px auto;
+}
+.calculator .calc h2 {
+  margin: 40px 0 30px;
+}
+/* .res {
+  display: none;
+} */
+.calculator select {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  color: #000;
+  font-size: 20px;
+  padding: 0 30px;
+  width: fit-content;
+  max-height: 45px;
+  min-height: 40px;
+}
+.calculator .form1 {
+}
+.calculator .form2 {
+}
+.calculator input {
+  border-radius: 10px;
+  width: 100%;
+  height: fit-content;
+  max-width: 633px;
+  /* max-height: 40px; */
+
+  font-weight: 500;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #000;
+}
+.calculator h4 {
+  font-weight: 500;
+  font-size: 30px;
+  color: #000;
+}
+.calculator .checkbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  margin: 30px;
+}
+.calculator #rs {
+  width: fit-content;
+}
+.calculator .top_block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1000px;
+  margin-top: 30px;
+}
+.calculator .top_block h4 {
+  max-width: 450px;
+  width: 100%;
+}
+.calculator .top_block * {
+  width: fit-content;
+  margin: 0;
+}
+.calculator .warn {
+  width: 100%;
+  max-width: 1060px;
+  margin: 30px 0 0 0;
+  font-weight: 500;
+  font-size: 30px;
+  color: #000;
+}
+.calculator .calc {
+  width: 100%;
+  max-width: 1760px;
+  margin: auto;
+  font-weight: 600;
+  font-size: 32px;
+  color: #000;
+}
+
+@media (max-width: 650px) {
+  .calculator {
+    margin-left: 20px;
+  }
+}

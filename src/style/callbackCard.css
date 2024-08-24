@@ -1,0 +1,16 @@
+.callback-card {
+  max-width: 390px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.callback-card img {
+  width: 100%;
+}
+.callback-card span {
+  color: #428bca;
+  font-size: 28px;
+}
