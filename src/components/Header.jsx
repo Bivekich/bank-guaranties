@@ -11,7 +11,7 @@ export const Header = () => {
 
   return (
     <header>
-      <h3>Банковские гарантии</h3>
+      <h3>Банковские гарантии онлайн</h3>
 
       <nav>
         <div className="hamburger" onClick={toggleMenu}>

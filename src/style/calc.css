@@ -6,6 +6,9 @@
   flex-wrap: wrap;
   gap: 60px;
 }
+.calculator .forms h4 {
+  font-weight: 700;
+}
 .calculator #result {
   width: fit-content;
   padding: 10px 15px;
@@ -98,6 +101,11 @@
 
 @media (max-width: 650px) {
   .calculator {
-    margin-left: 20px;
+    margin: 0 20px;
+  }
+}
+@media (max-width: 550px) {
+  .checkbox {
+    margin: 0 !important;
   }
 }

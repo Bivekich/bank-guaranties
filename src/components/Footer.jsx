@@ -94,16 +94,25 @@ export const Footer = () => {
         <a href="">Согласие на обработку персональных данных</a>
       </div>
       <div className="links">
-        <a href="">
-          <img src="/tg.svg" alt="Telegram" />
+        <a style={{ fontWeight: 800 }} href="tel:8(800)6004592">
+          8(800)6004592
         </a>
-        <a href="">
-          <img src="/tg.svg" alt="Telegram" />
+        <a style={{ fontWeight: 800 }} href="mailto:info@garant-bg.ru ">
+          info@garant-bg.ru
         </a>
       </div>
       <div className="links">
-        <a href="" className="latest_link">
-          Made with ❤️ by <u>Лев Данилов</u>
+        <a href="tel:8(800)6004592">
+          <img src="/phone.svg" alt="Номер телефона" />
+        </a>
+        <a href="mailto:info@garant-bg.ru ">
+          <img src="/mail.svg" alt="Mail" />
+        </a>
+        <a href="wa.me/+79035129685 ">
+          <img src="/wa.svg" alt="Whatsapp" />
+        </a>
+        <a href="mailto:info@garant-bg.ru ">
+          <img src="/tg.svg" alt="Telegram" />
         </a>
       </div>
     </footer>

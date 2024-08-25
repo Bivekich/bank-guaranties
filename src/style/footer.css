@@ -68,6 +68,9 @@ footer .links {
 footer .links a {
   color: #000;
 }
+footer .links a img {
+  width: 45px;
+}
 footer h2 {
   text-align: center;
   color: #000;

@@ -83,6 +83,9 @@ nav a:hover {
 
 /* Responsive Styles */
 @media (max-width: 1250px) {
+  header {
+    height: 110px;
+  }
   .hamburger {
     display: flex;
   }
@@ -93,7 +96,7 @@ nav a:hover {
 
   .he-nav {
     position: absolute;
-    top: 80px;
+    top: 110px;
     right: 0;
     background-color: #fff;
     flex-direction: column;
@@ -116,5 +119,28 @@ nav a:hover {
     margin-right: 0;
     margin-top: 30px;
     text-align: center;
+  }
+}
+@media (max-width: 680px) {
+  header {
+    height: 110px;
+  }
+  header h3 {
+    max-width: 80%;
+  }
+  header .hamburger {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+  }
+}
+@media (max-width: 550px) {
+  header {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+  }
+  header h3 {
+    font-size: 30px;
   }
 }

@@ -87,8 +87,8 @@ export const MainPage = () => {
         </div>
       </div>
       <section className="pluses">
-        <Plus image="/plus1.png" title="До 300 млн Р" body="Лимит гарантий" />
-        <Plus image="/plus2.png" title="До 150 млн Р" body="Сумма гарантии" />
+        <Plus image="/plus1.png" title="До 1 млрд Р" body="Лимит гарантий" />
+        <Plus image="/plus2.png" title="До 500 млн Р" body="Сумма гарантии" />
         <Plus image="/plus3.png" title="До 120 месяцев" body="Срок гарантии" />
         <Plus image="/plus4.png" title="До 1000 Р" body="Комиссия за выдачу" />
       </section>
