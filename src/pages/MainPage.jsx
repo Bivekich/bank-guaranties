@@ -1,15 +1,15 @@
-import React, { useRef, useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import "../style/MainPage.css";
-import { Plus } from "../components/Plus";
-import { Type } from "../components/Type";
-import { MainStep } from "../components/MainStep";
-import { Advant } from "../components/Advant";
-import { CallbackCard } from "../components/CallbackCard";
-import { ArticleCard } from "../components/ArticleCard";
+import React, { useRef, useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import '../style/MainPage.css';
+import { Plus } from '../components/Plus';
+import { Type } from '../components/Type';
+import { MainStep } from '../components/MainStep';
+import { Advant } from '../components/Advant';
+import { CallbackCard } from '../components/CallbackCard';
+import { ArticleCard } from '../components/ArticleCard';
 
-import { getArticles, getOtzivi, urlFor } from "../sanityclient";
-import { Article } from "./Article";
+import { getArticles, getOtzivi, urlFor } from '../sanityclient';
+import { Article } from './Article';
 
 export const MainPage = () => {
   const { anchor } = useParams();
@@ -27,7 +27,6 @@ export const MainPage = () => {
       if (Object.keys(articles).length > 0) {
         const articleEls = Object.keys(articles).map((i) => {
           const article = articles[i];
-          console.log(article);
           return {
             body: `${article.pharagraph1.substr(0, 200)}...`,
             title: article.title1,
@@ -37,7 +36,7 @@ export const MainPage = () => {
         });
         setArticleElements(articleEls);
       } else {
-        setArticleElements(["<p>Нет доступных товаров.</p>"]);
+        setArticleElements(['<p>Статьи недоступны.</p>']);
       }
 
       if (Object.keys(otzivi).length > 0) {
@@ -50,17 +49,17 @@ export const MainPage = () => {
         });
         setOtziviElements(otziviEls);
       } else {
-        setOtziviElements(["<p>Нет доступных товаров.</p>"]);
+        setOtziviElements(['<p>Отзывы отсутствуют.</p>']);
       }
     };
 
     fetchData();
   }, []);
 
-  const scrollToBlock = (anchor_ = "") => {
+  const scrollToBlock = (anchor_ = '') => {
     if (anchor_ && blocks[anchor_]) {
       blocks[anchor_].current.scrollIntoView({
-        behavior: "smooth",
+        behavior: 'smooth',
       });
     }
   };
@@ -74,132 +73,144 @@ export const MainPage = () => {
       <div className="gray-bg">
         <div className="gray-bg-inner">
           <div className="text">
-            <h3>Банковские гарантии</h3>
+            <h3>Гарантии от банков</h3>
             <ul>
-              <li>На участие и исполнение по 44-ФЗ, 223-ФЗ, 615-ПП</li>
-              <li>Коммерческая банковская гарантия</li>
+              <li>На участие и исполнение в рамках 44-ФЗ, 223-ФЗ, 615-ПП</li>
+              <li>Гарантии для коммерческих целей</li>
             </ul>
             <a href="#" className="button">
-              <span>Получить гарантию</span>
+              <span>Оформить гарантию</span>
             </a>
           </div>
-          <img src="/mainImage.png" alt="" />
+          <img src="/mainImage.png" alt="Банковские гарантии" />
         </div>
       </div>
       <section className="pluses">
-        <Plus image="/plus1.png" title="До 1 млрд Р" body="Лимит гарантий" />
-        <Plus image="/plus2.png" title="До 500 млн Р" body="Сумма гарантии" />
-        <Plus image="/plus3.png" title="До 120 месяцев" body="Срок гарантии" />
-        <Plus image="/plus4.png" title="До 1000 Р" body="Комиссия за выдачу" />
+        <Plus
+          image="/plus1.png"
+          title="До 300 млн Р"
+          body="Максимальный лимит на гарантии"
+        />
+        <Plus
+          image="/plus2.png"
+          title="До 150 млн Р"
+          body="Максимальный размер гарантии"
+        />
+        <Plus
+          image="/plus3.png"
+          title="До 120 месяцев"
+          body="Длительность гарантии"
+        />
+        <Plus
+          image="/plus4.png"
+          title="От 1000 Р"
+          body="Комиссия за оформление"
+        />
       </section>
       <section className="types">
-        <h3>Виды гарантий</h3>
+        <h3>Виды банковских гарантий</h3>
         <div className="type-card">
           <Type
             image="/type1.png"
             title="Тендерная гарантия"
-            body="необходима в госзакупках по 44-ФЗ., 223-ФЗ., 615-ПП.РФ."
+            body="Нужна для участия в госзакупках по 44-ФЗ, 223-ФЗ, 615-ПП."
           />
           <Type
             image="/type2.png"
-            title="Коммерческая гарантия"
-            body="применяется в основном в коммерческих контрактах, которые заключаются вне закупок"
+            title="Гарантия для бизнеса"
+            body="Подходит для коммерческих контрактов."
           />
           <Type
             image="/type3.png"
-            title="Таможенная гарантия"
-            body="необходима тем кто занимается перевозкой товаров через границу"
+            title="Гарантия на таможенные операции"
+            body="Необходима для участников внешнеэкономической деятельности."
           />
           <Type
             image="/type4.png"
-            title="Налоговая гарантия"
-            body="применяется при отсрочке от уплаты налогов"
+            title="Гарантия на налоговые обязательства"
+            body="Предоставляется при отсрочке налоговых выплат."
           />
         </div>
       </section>
 
       <section className="steps">
-        <h3>Как получить гарантию</h3>
+        <h3>Процесс получения гарантии</h3>
         <div className="steps-num">
-          <MainStep number="1" title="Подайте заявку" body="На нашем сайте" />
+          <MainStep number="1" title="Оформите заявку" body="На нашем сайте" />
           <MainStep
             number="2"
-            title="Предоставьте документы"
-            body="необходимый пакет документов"
+            title="Соберите документы"
+            body="Предоставьте все необходимые бумаги"
           />
           <MainStep
             number="3"
             title="Оплатите комиссию"
-            body="за выдачу банковской гарантии"
+            body="За получение банковской гарантии"
           />
-          <MainStep number="4" title="Получите гарантию" body="электронно" />
+          <MainStep
+            number="4"
+            title="Получите гарантию"
+            body="В электронном виде"
+          />
         </div>
       </section>
       <section className="online">
         <div className="text">
-          <h3>Онлайн расчет стоимости банковской гарантии</h3>
+          <h3>Расчет стоимости гарантии онлайн</h3>
 
           <p>
-            Этот инструмент создан для того, чтобы помочь вам легко и быстро
-            оценить стоимость банковской гарантии в зависимости от ваших
-            потребностей и условий сделки.
+            Мы предлагаем удобный калькулятор, чтобы вы могли быстро рассчитать
+            стоимость банковской гарантии.
           </p>
 
           <p>
-            Наш калькулятор учитывает различные параметры, такие как сумма
-            гарантии, срок ее действия и рынок, на котором вы работаете, чтобы
-            предоставить вам максимально точные цифры. Просто введите
-            необходимые данные, и вы получите прогнозируемую стоимость
-            банковской гарантии в считанные минуты.
+            Просто введите свои данные, и наш инструмент покажет вам точную
+            стоимость с учетом суммы, срока действия и условий рынка.
           </p>
         </div>
         <Link to="/calc" className="button">
-          <span>Рассчитать</span>
+          <span>Рассчитать стоимость</span>
         </Link>
       </section>
       <section className="about-us">
         <div className="text">
-          <h3>О нас</h3>
+          <h3>Кто мы</h3>
           <p>
-            Финансовая Компания Гарант-БГ постоянно развивается и растет, наши
-            специалисты ежегодно проходят <br /> обучение и семинары по
-            повышению квалификации. В финансовой сфере работаем более 10 лет, со{" "}
-            <br /> многими банками партнёрские взаимоотношения. <br />
-            Мы предоставляем широкий спектр финансовых услуг обеспечивающий
-            прекрасный результат и <br /> положительное влияние на вашу
-            деятельность, экономим ваше время и деньги. <br />
-            В кротчайшие сроки поможем вам получить банковские гарантии: <br />
-            на участие в закупках, <br />
-            на обеспечения исполнения контракта, <br />
-            на возврат аванса, <br />
-            на гарантийное обслуживание <br />
-            таможенные, налоговые и т.д. от наших банков партнеров, без всяких
-            проблем и подводных камней. <br /> Если вам где-то даже и отказали в
-            выдаче банковской гарантии не расстраивайтесь, наши <br />{" "}
-            специалисты обязательно разберутся в вашей ситуации и помогут в
-            получении.{" "}
+            Финансовая компания "Гарант-БГ" активно развивается, и наши
+            специалисты регулярно повышают свою квалификацию. Мы более 10 лет
+            работаем в финансовом секторе, сотрудничая с ведущими банками.
+          </p>
+          <p>
+            Мы предлагаем широкий спектр услуг, которые помогут вам в бизнесе.
+            Независимо от того, нужна ли вам гарантия для участия в закупках,
+            исполнения контрактов или другие виды гарантий, мы поможем вам
+            получить нужные документы в кратчайшие сроки.
+          </p>
+          <p>
+            Даже если вам отказали в другом месте, наши специалисты найдут
+            оптимальное решение для вашей ситуации.
           </p>
         </div>
       </section>
       <section className="advants">
-        <h3>Наши преимущества</h3>
+        <h3>Почему выбирают нас</h3>
         <div className="adv">
           <Advant
             image="/advant1.png"
-            body="Только белые банковские гарантии. В числе наших партнеров только банки, входящие в официальный перечень МинФина РФ Гарантия подлинная - проходит любые проверки"
+            body="Только легальные банковские гарантии от банков, аккредитованных МинФином РФ. Наши гарантии проходят все проверки."
           />
           <Advant
             image="/advant2.png"
-            body="Работаем с любыми формами организаций: ИП, ООО, АО, ЗАО"
+            body="Мы работаем с компаниями всех форм собственности: ИП, ООО, АО, ЗАО."
           />
           <Advant
             image="/advant3.png"
-            body="Поможем получить гарантию без залога и поручительства"
+            body="Помогаем получить гарантию без необходимости залога или поручительства."
           />
         </div>
       </section>
       <section className="callback">
-        <h2>Отзывы клиентов</h2>
+        <h2>Отзывы наших клиентов</h2>
         <ul className="callback-list">
           {otziviElements.map((elem) => {
             return (
@@ -209,7 +220,7 @@ export const MainPage = () => {
         </ul>
       </section>
       <section className="articles" ref={blocks.articles}>
-        <h2>Статьи</h2>
+        <h2>Полезные статьи</h2>
         <ul role="list" className="articles-list">
           {articleElements.map((elem) => {
             return (
