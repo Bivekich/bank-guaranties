@@ -102,10 +102,10 @@ export const Footer = () => {
           info@garant-bg.ru
         </a>
       </div>
+      <center>
+        <h4>Режим работы: 10.00-19.00 без выходных</h4>
+      </center>
       <div className="map-container">
-        <center>
-          <h4>Режим работы: 10.00-19.00 без выходных</h4>
-        </center>
         <YMaps>
           <Map
             defaultState={{ center: [55.763255, 37.586652], zoom: 15 }}
