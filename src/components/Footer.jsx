@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../style/footer.css";
+import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
 const token = "7107296270:AAHaoOr_WkEYCK6_kq9v3QZeyyEBlZz5hM8";
 const chat_id = "-4504065332"; // Replace with your Telegram chat ID
@@ -101,6 +102,19 @@ export const Footer = () => {
           info@garant-bg.ru
         </a>
       </div>
+      <div className="map-container">
+        <center>
+          <h4>Режим работы: 10.00-19.00 без выходных</h4>
+        </center>
+        <YMaps>
+          <Map
+            defaultState={{ center: [55.763255, 37.586652], zoom: 15 }}
+            style={{ width: "100%", height: "400px" }} // Set explicit styles for width and height
+          >
+            <Placemark geometry={[55.763255, 37.586652]} />
+          </Map>
+        </YMaps>
+      </div>
       <div className="links">
         <a href="tel:8(800)6004592">
           <img src="/phone.svg" alt="Номер телефона" />
@@ -110,9 +124,6 @@ export const Footer = () => {
         </a>
         <a href="wa.me/+79035129685 ">
           <img src="/wa.svg" alt="Whatsapp" />
-        </a>
-        <a href="mailto:info@garant-bg.ru ">
-          <img src="/tg.svg" alt="Telegram" />
         </a>
       </div>
     </footer>
