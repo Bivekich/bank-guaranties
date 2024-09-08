@@ -11,6 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
+      <link rel="icon" href="/favicon.ico" />
       <Routes>
         <Route path="/:anchor?" element={<MainPage />} />
         <Route path="article/:id" element={<Article />} />
